@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Results</title>
+</head>
+<body>
+
+    <p>Thanks for submitting this form! You have submitted this form {{ request.session.counter }} times now.</p>
+    <p>{{ request.session.name }}</p>
+    <p>{{ request.session.location }}</p>
+    <p>{{ request.session.language }}</p>
+    <p>{{ request.session.comment }}</p>
+    <form action="/" method="GET">
+        {% csrf_token %}
+        <input type="submit" value="Go Back">
+    </form>
+
+</body>
+</html>
